@@ -274,6 +274,38 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /* SECTION */
 
 .section {
@@ -293,58 +325,564 @@
     color: #FB3640;
 }
 
-.section form label {
-    color: #E2E2E2;
-    font-family: "Noto Sans JP", "Roboto", sans-serif;
-    font-size: 13px;
-    font-weight: normal;
-    margin-right: 5px;
+.g-box {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+
+
+.generoBox {
+  display: flex;
+  align-items: center;
+}
+
+.generoBox h2 { 
+  font-size: 13px;
+  text-transform: uppercase;
+  margin-right: 15px;
+  color: #C5C5C5;
+  line-height: 50px;
+  letter-spacing: 1px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+
+.generoBox:nth-child(2) .dropdown {
+  width: 118px;
+}
+
+.generoBox:nth-child(3) .dropdown {
+  width: 96px;
+}
+
+.generoBox:nth-child(4) .dropdown {
+  width: 160px;
+}
+
+.generoBox:nth-child(5) .dropdown {
+  width: 146px;
+}
+
+.dropdown {
+  position: relative;
+  width: 196px;
+  height: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+.dropdown::before {
+  content: '';
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  z-index: 1000;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #fff;
+  border-top: 2px solid transparent;
+  border-right: 2px solid transparent;
+  transform: rotate(-45deg);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.dropdown.active::before  {
+  top: 22px;
+  transform: rotate(-225deg);
+}
+
+.dropdown input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border: 1px solid #fff;
+  outline: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 13px;
+  background-color: #171717;
+  color: #C5C5C5;
+}
+
+.dropdown .option {
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  height: 350px;
+  background: #171717;
+  border-radius: 10px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  overflow: hidden; 
+  display: none;
+  font-size: 13px;
+  color: #C5C5C5;
+  border: 1px solid #fff;
 } 
 
-
-
-
-.section form select {
-	appearance: none;
-	-webkit-appearance: none;
-	-moz-appearance: none;
+.dropdown.active .option {
+  display: block;
+  overflow-y: scroll;
 }
 
-.section form select {
-  position: relative;
-  width: 200px;
-  color: #c5c5c5;
-  background-color: #171717;
-  outline: none;
-  border: 1px solid #fff;
-  box-shadow: none;
-  padding: 5px 15px;
-  border-radius: 2px;
+.dropdown .option div {
+  padding: 12px 20px;
   cursor: pointer;
+  transition: 0.1s;
+}
+
+.dropdown .option div:hover {
+  /* background: #E2E2E2; */
+  background: #f1f1f1;
+  color: #171717;
+  padding-left: 30px;
 }
  
 
-.section form select option {
-  box-shadow: none;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dropdown1::before {
+  content: '';
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  z-index: 1000;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #fff;
+  border-top: 2px solid transparent;
+  border-right: 2px solid transparent;
+  transform: rotate(-45deg);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.dropdown1.active::before  {
+  top: 22px;
+  transform: rotate(-225deg);
+}
+
+.dropdown1 input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border: 1px solid #fff;
+  outline: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 13px;
+  background-color: #171717;
+  color: #C5C5C5;
+}
+
+.dropdown1 .option {
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  height: auto;
+  background: #171717;
+  border-radius: 10px; 
+  overflow: hidden; 
+  display: none;
+  font-size: 13px;
+  color: #C5C5C5;
+  border: 1px solid #fff;
+} 
+
+.dropdown1.active .option {
+  display: block;
+  overflow-y: hidden;
+}
+
+.dropdown1 .option div {
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.dropdown1 .option div:hover {
+  /* background: #E2E2E2; */
+  background: #f1f1f1;
+  color: #171717;
+  padding-left: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dropdown2::before {
+  content: '';
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  z-index: 1000;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #fff;
+  border-top: 2px solid transparent;
+  border-right: 2px solid transparent;
+  transform: rotate(-45deg);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.dropdown2.active::before  {
+  top: 22px;
+  transform: rotate(-225deg);
+}
+
+.dropdown2 input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border: 1px solid #fff;
+  outline: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 13px;
+  background-color: #171717;
+  color: #C5C5C5;
+}
+
+.dropdown2 .option {
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  height: 350px;
+  background: #171717;
+  border-radius: 10px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  overflow: hidden; 
+  display: none;
+  font-size: 13px;
+  color: #C5C5C5;
+  border: 1px solid #fff;
+} 
+
+.dropdown2.active .option {
+  display: block;
+  overflow-y: scroll;
+}
+
+.dropdown2 .option div {
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.dropdown2 .option div:hover {
+  /* background: #E2E2E2; */
+  background: #f1f1f1;
+  color: #171717;
+  padding-left: 30px;
+}
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dropdown3::before {
+  content: '';
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  z-index: 1000;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #fff;
+  border-top: 2px solid transparent;
+  border-right: 2px solid transparent;
+  transform: rotate(-45deg);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.dropdown3.active::before  {
+  top: 22px;
+  transform: rotate(-225deg);
+}
+
+.dropdown3 input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border: 1px solid #fff;
+  outline: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 13px;
+  background-color: #171717;
+  color: #C5C5C5;
+}
+
+.dropdown3 .option {
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  height: auto;
+  background: #171717;
+  border-radius: 10px; 
+  overflow: hidden; 
+  display: none;
+  font-size: 13px;
+  color: #C5C5C5;
+  border: 1px solid #fff;
+} 
+
+.dropdown3.active .option {
+  display: block;
+  overflow-y: hidden;
+}
+
+.dropdown3 .option div {
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.dropdown3 .option div:hover {
+  /* background: #E2E2E2; */
+  background: #f1f1f1;
+  color: #171717;
+  padding-left: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.dropdown4::before {
+  content: '';
+  position: absolute;
+  right: 20px;
+  top: 15px;
+  z-index: 1000;
+  width: 8px;
+  height: 8px;
+  border: 2px solid #fff;
+  border-top: 2px solid transparent;
+  border-right: 2px solid transparent;
+  transform: rotate(-45deg);
+  transition: 0.5s;
+  pointer-events: none;
+}
+
+.dropdown4.active::before  {
+  top: 22px;
+  transform: rotate(-225deg);
+}
+
+.dropdown4 input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  border: 1px solid #fff;
+  outline: none;
+  padding: 12px 20px;
+  border-radius: 10px;
+  font-size: 13px;
+  background-color: #171717;
+  color: #C5C5C5;
+}
+
+.dropdown4 .option {
+  position: absolute;
+  top: 70px;
+  width: 100%;
+  height: auto;
+  background: #171717;
+  border-radius: 10px; 
+  overflow: hidden; 
+  display: none;
+  font-size: 13px;
+  color: #C5C5C5;
+  border: 1px solid #fff;
+} 
+
+.dropdown4.active .option {
+  display: block;
+  overflow-y: hidden;
+}
+
+.dropdown4 .option div {
+  padding: 12px 20px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+.dropdown4 .option div:hover {
+  /* background: #E2E2E2; */
+  background: #f1f1f1;
+  color: #171717;
+  padding-left: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+.btnFilter input {
+  font-size: 13px;
+  color: #171717;
+  background: #E2E2E2;
+  font-weight: 900;
+  padding: 10px 30px;
+  letter-spacing: 1px;
   border: none;
   outline: none;
-}
- 
-
-.section form .genero-icon {
-  position: relative;
-	top: -20px;
-	right: -215px;
-	width: 10px;
-	height: 10px;
-	display: block;
-	border-left:4px solid #C5C5C5;
-	border-bottom:4px solid #C5C5C5;
-	transform: rotate(-45deg); /* Giramos el cuadrado */
-	transition: all 0.25s ease;
+  border-radius: 25px;
+  font-family: "Noto Sans JP", "Roboto", sans-serif;
   cursor: pointer;
+  transition: 0.2s;
 }
 
+.btnFilter input:hover {
+  background: #C4C4C4;
+}
+
+.btnFilter input:active {
+  background: #E8E8E8;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.section .img-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 170px);
+  gap: 44px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.section .img-box img {
+  width: 100%;
+  height: 255px;
+  object-fit: cover;
+}
 
 
 
