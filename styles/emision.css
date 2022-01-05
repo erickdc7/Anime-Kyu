@@ -1,0 +1,577 @@
+/*
+  * FUENTES: Noto Sans JP, Ubuntu, Roboto
+*/
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    color: #e2e2e2;
+    background-color: #171717;
+    font-family: "Noto Sans JP", "Roboto", sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+  }
+  
+  
+  h1,
+  h2 {
+    font-family: "Ubuntu", "Roboto", sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    color: #e2e2e2;
+  }
+  
+  h1 {
+    margin-bottom: 50px;
+  }
+  
+  p,
+  ul,
+  li {
+    font-family: "Noto Sans JP", "Roboto", sans-serif;
+    font-size: 13px;
+    font-weight: normal;
+    color: #c5c5c5;
+  }
+  a {
+    text-decoration: none;
+    color: inherit;
+    color: #c5c5c5;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  /* HEADER */
+  
+  .header {
+    margin: 25px 130px 0 130px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .header .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .header .logo h1 a {
+    text-decoration: none;
+    color: #fff;
+  }
+  
+  .header .logo h1 {
+    font-size: 40px;
+    font-family: "Ubuntu", "Roboto", sans-serif;
+    font-weight: 700;
+    user-select: none;
+    margin: 0;
+    color: #fff;
+  }
+  
+  .header .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+  }
+  
+  .header .nav .nav-list li {
+    list-style: none;
+    display: inline-block;
+    font-size: 15px;
+    font-family: "Ubuntu", "Roboto", sans-serif;
+    font-weight: 400;
+  }
+  
+  .header .nav .nav-list li:nth-child(1) {
+    margin-left: 15px;
+  }
+  
+  .header .nav .nav-list li a {
+    margin-left: 10px;
+    padding: 10px 15px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.1s;
+  }
+  
+  .header .nav .nav-list li a:hover {
+    background-color: rgba(232, 232, 232, 0.1);
+    color: #fff;
+  }
+  
+  .search {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: #e2e2e2;
+    border-radius: 40px;
+    transition: 0.5s;
+    overflow: hidden;
+  }
+  
+  .search.active {
+    width: 300px;
+  }
+  
+  .search .icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height: 40px;
+    background: #e2e2e2;
+    border-radius: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    cursor: pointer;
+  }
+  
+  .search .icon::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 2px solid #000;
+    border-radius: 50%;
+    transform: translate(-2px, -2px);
+  }
+  
+  .search .icon::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 7px;
+    background: #000;
+    transform: translate(6px, 6px) rotate(315deg);
+  }
+  
+  .search .input {
+    position: relative;
+    width: 300px;
+    height: 40px;
+    left: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .search .input input {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    padding: 0 80px 0 0;
+    background: #e2e2e2;
+    color: #171717;
+    font-family: "Noto Sans JP", "Roboto", sans-serif;
+  }
+  
+  .clear {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 15px;
+    height: 15px;
+    right: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .clear::before {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 15px;
+    background: #171717;
+    transform: rotate(45deg);
+  }
+  
+  .clear::after {
+    position: absolute;
+    content: "";
+    width: 1px;
+    height: 15px;
+    background: #171717;
+    transform: rotate(315deg);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* SECTION */
+
+.section {
+    margin: 25px 130px 25px 130px;
+}
+
+.section h1 {
+    margin: 0;
+    margin-bottom: 20px;
+    font-size: 25px;
+    font-weight: bold;
+    font-family: "Ubuntu", "Roboto", sans-serif;
+    color: #E2E2E2;
+}
+
+.section h1 i {
+    color: #FB3640;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+  SECCION DE LAS IMAGENES
+*/
+
+.section .img-box {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 170px);
+  gap: 44px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.section .img-box img {
+  width: 100%;
+  height: 255px;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    /*  FOOTER  */
+.footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 20px auto 20px;
+    grid-template-areas:
+      "blanco1 blanco1 blanco1"
+      "footer1 footer2 footer3"
+      "blanco2 blanco2 blanco2";
+    background-color: rgba(255, 255, 255, 0.9);
+  }
+  
+  .footer .footer-1 ul li,
+  .footer .footer-2 ul li,
+  .footer .footer-3 ul li,
+  .footer .footer-3 h4 {
+    color: #000;
+  }
+  .footer .footer-1 a:active,
+  .footer .footer-2 a:active {
+    font-weight: bold;
+  }
+  
+  .footer .footer-1 ul,
+  .footer .footer-2 ul,
+  .footer .footer-3 ul {
+    list-style: none;
+  }
+  
+  .empty-block1 {
+    grid-area: blanco1;
+  }
+  .empty-block2 {
+    grid-area: blanco2;
+  }
+  
+  /*  FOOTER 1  */
+  .footer-1 {
+    grid-area: footer1;
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    padding: 15px;
+  }
+  .footer-1 ul li {
+    margin-bottom: 15px;
+  }
+  .footer-1 ul li:last-child {
+    margin-bottom: 0;
+  }
+  .footer-1 ul li a {
+    color: #000;
+  }
+  
+  /*  FOOTER 2  */
+  .footer-2 {
+    grid-area: footer2;
+    align-self: center;
+    justify-self: center;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    width: 100%;
+    height: 100%;
+    display: inline-flex;
+    text-align: center;
+  }
+  
+  .footer-2 .ul-1 {
+    width: 100%;
+    align-self: center;
+  }
+  .footer-2 .ul-2 {
+    width: 100%;
+    align-self: center;
+  }
+  
+  .footer-2 .ul-1 li,
+  .footer-2 .ul-2 li {
+    margin-bottom: 15px;
+  }
+  .footer-2 .ul-1 li:last-child,
+  .footer-2 .ul-2 li:last-child {
+    margin-bottom: 0;
+  }
+  .footer-2 .ul-1 li a,
+  .footer-2 .ul-2 li a {
+    color: #000;
+  }
+  /*  FOOTER 3  */
+  .footer-3 {
+    grid-area: footer3;
+    align-self: center;
+    justify-self: center;
+    padding: 0 10px;
+  }
+  
+  .footer-3 .img-social {
+    text-align: center;
+  }
+  
+  .footer-3 .img-social img {
+    width: 20%;
+  }
+  
+  .footer-3 h4 {
+    text-transform: uppercase;
+    text-align: center;
+    margin: 10px 0;
+    font-size: 13px;
+  }
+  
+  .footer-3 ul {
+    text-align: center;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: baseline;
+  }
+  
+  .footer-3 ul li {
+    display: inline;
+  }
+  
+  .footer-3 ul li a {
+    color: #000;
+    font-size: 30px;
+    text-align: center;
+  }
