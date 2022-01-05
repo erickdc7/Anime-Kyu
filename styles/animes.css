@@ -823,9 +823,9 @@
 
 
 
-
-
- 
+/*
+  BOTON DE FILTRAR
+*/
 
 .btnFilter input {
   font-size: 13px;
@@ -868,7 +868,9 @@
 
 
 
-
+/*
+  SECCION DE LAS IMAGENES
+*/
 
 .section .img-box {
   display: grid;
@@ -883,6 +885,133 @@
   height: 255px;
   object-fit: cover;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+  PAGINACION
+*/
+
+.pagination {
+  margin: 44px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pagination ul {
+  display: flex; 
+  background: #fff;
+  background: #E2E2E2;
+  background: transparent;
+  padding: 8px;
+  border-radius: 50px;
+  border: 1px solid #f1f1f1;
+}
+
+.pagination ul li {
+  list-style: none;
+  line-height: 45px;
+  text-align: center;
+  font-size: 13px;
+  cursor: pointer;
+  color: #000;
+  color: #C5C5C5;
+  transition: all 0.3s ease;
+}
+
+.pagination ul li.numb {
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+  margin: 0 3px;
+}
+
+.pagination ul li.dots {
+  cursor: default;
+}
+
+
+.pagination ul li.btn { 
+  padding: 0 20px;
+}
+
+.pagination ul li.prev {
+  border-radius: 25px 5px 5px 25px;
+}
+
+.pagination ul li.next {
+  border-radius: 5px 25px 25px 5px;
+}
+
+.pagination ul li.active,
+.pagination ul li.numb:hover,
+.pagination ul li.btn:hover {
+  color: #fff;
+  background: #20b2aa;
+  background: #FB3640;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
