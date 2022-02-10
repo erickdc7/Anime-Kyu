@@ -278,6 +278,16 @@ a:hover {
 
 
 
+
+
+
+
+
+
+
+
+
+
 /* VIDEO SECTION */
 
 .video-section {
@@ -302,11 +312,10 @@ a:hover {
 
 .container-video-links {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  justify-content: center;
+  grid-template-columns: repeat(auto-fill, minmax(100px, 277px)); 
+  justify-content: space-between;
   align-content: center;
-  gap: 30px 50px;
+  gap: 30px;
 }
 
 .container-video-links a {
@@ -505,17 +514,28 @@ a:hover {
 
 
 
+
+
+
+
+
+
+
+
+
+
 /* ANIME DEL DIA/SEMANA */
 
 
 .grid-section {
   display: grid;
+  justify-content: space-between;
   grid-template-columns: repeat(2, auto);
   grid-template-rows: 50px auto;
   grid-template-areas: 
     "title1 title2"
     "section1 section2";
-  margin: 0 64px;
+  margin: 0 130px;
   margin-top: 30px;  
 }
 
@@ -526,7 +546,6 @@ a:hover {
 
 .grid-section .title-d {
   grid-area: title1;
-  margin-left: 65px;
   font-size: 25px;
 }
 
@@ -536,7 +555,6 @@ a:hover {
 
 .grid-section .title-w {
   grid-area: title2;
-  margin-left: 65px;
   font-size: 25px;
 }
 
@@ -548,26 +566,23 @@ a:hover {
 .section-week {
   background-color: #343434;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  align-content: flex-start;
   flex-wrap: wrap;
-  width: 530px;
-  height: 403px;
+  flex-direction: row;
+  width: 605px;
+  height: auto;
   margin: 0 auto;
   position: relative;
   border-radius: 5px;
+  padding: 20px;
 }
  
 
 /*   IMG PORTADA   */
 .img-portada {
-  width: 200px;
-  height: 300px;
+  width: 240px;
+  height: 360px;
   background-color: transparent;
-  position: absolute;
-  top: -15px;
-  left: -15px;
+  float: left;
   /*  
   background-image: url("../images/kekkai-sensen.jpg");
   background-repeat: no-repeat;
@@ -576,9 +591,14 @@ a:hover {
   filter: drop-shadow(4px 4px 4px rgba(0, 0, 0, 0.25));
   
   overflow: hidden;
+} 
+
+.img-portada a img { 
+  width: 100%;
+  object-fit: cover;
 }
- 
-.img-portada::before {
+
+/* .img-portada::before {
   position: absolute;
 	top: 0;
 	left: -75%;
@@ -608,7 +628,17 @@ a:hover {
 	100% {
 		left: 125%;
 	}
-}
+} */
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -637,30 +667,23 @@ a:hover {
 
 
 /*   INFO   */
-.anime-info h2 {
-  margin-left: 200px;
-  line-height: 40px;
+.anime-info {
+  width: 50%;
+  padding-left: 15px;
 }
 
 .anime-info h2 a {
   color: #e2e2e2;
 }
-.anime-info p {
-  margin-left: 200px;
-  padding-right: 10px;
-}
-
-.list-info {
-  margin-left: 200px;
-  margin-top: 3px;
-  margin-bottom: 3px;
+.list-info { 
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
   font-weight: lighter;
-  font-size: 10px;
+  font-size: 11px;
   color: #c5c5c5;
   user-select: none;
+  padding: 3px 0 3px;
 }
 .list-info div {
   padding: 3px;
@@ -670,122 +693,14 @@ i {
   margin-right: 5px;
 }
 
-/*   IMG-CAROUSEL   */
-.img-carousel {
-  display: flex;
-  flex-direction: row;
-  column-gap: 5px;
-}
-
-.img-carousel div {
-  background-color: transparent;
-  width: 136px;
-  height: 76px;
-  display: inline-block;
-  text-align: center;
-  transition: all 0.5s;
-  cursor: pointer;
-}
-
-.img-carousel .img-1:hover,
-.img-carousel .img-2:hover,
-.img-carousel .img-3:hover,
-.img-carousel .img-4:hover {
-  transform: scale(1.3);
-  z-index: 1;
-}
-
-.img-carousel .img-1 {
-  background-image: url("../images/pic1-kekkai-sensen.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-.img-carousel .img-2 {
-  background-image: url("../images/pic2-kekkai-sensen.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-.img-carousel .img-3 {
-  background-image: url("../images/pic3-kekkai-sensen.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-.img-carousel .img-4 {
-  background-image: url("../images/pic4-kekkai-sensen.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-.section-week .img-carousel .img-1 {
-  background-image: url("../images/pic1-inuyashiki.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-.section-week .img-carousel .img-2 {
-  background-image: url("../images/pic2-inuyashiki.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-.section-week .img-carousel .img-3 {
-  background-image: url("../images/pic3-inuyashiki.png");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
-
-.section-week .img-carousel .img-4 {
-  background-image: url("../images/pic6-inuyashiki.jpg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
-  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-}
 
 
-/*   GENERO   */
-.list-genero {
-  text-align: center;
-  margin-top: 15px;
-}
 
-.list-genero ul {
-  list-style: none;
-  margin: 0;
-}
 
-.list-genero li {
-  display: inline;
-  padding: 5px 6px;
-  border-radius: 10px;
-  font-size: 10px;
-  color: #c5c5c5;
-}
 
-.list-genero li:nth-child(odd) {
-  background-color: #171717;
-}
 
-.list-genero li:nth-child(even) {
-  background-color: #343434;
-}
+
+
 
 
 
@@ -830,7 +745,7 @@ i {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(1, auto); 
   gap: 60px; 
-  margin: 0 115px;
+  margin: 0 130px;
   margin-bottom: 60px;
 }
 
@@ -843,7 +758,7 @@ i {
   align-content: flex-start;
   flex-wrap: wrap;
   width: 100%;
-  height: 460px;
+  height: 485px;
   margin: 0 auto;
   padding: 0 25px;
   position: relative;
@@ -922,12 +837,21 @@ i {
   bottom: -5px;
   right: -7px;
   transition: transform .5s;
-}
- 
+} 
 .btn-read-more:hover {
   transform: scale(1.1) rotate(4deg);
   color: #000;
 }
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -1010,6 +934,7 @@ i {
 
 /*  FOOTER  */
 .footer {
+  padding: 0 130px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 20px auto 20px;
@@ -1051,7 +976,7 @@ i {
   text-align: center;
   align-self: center;
   justify-self: center;
-  padding: 15px;
+  padding: 0 0 0 0;
 }
 .footer-1 ul li {
   margin-bottom: 15px;
@@ -1103,7 +1028,7 @@ i {
   grid-area: footer3;
   align-self: center;
   justify-self: center;
-  padding: 0 10px;
+  padding: 0 0 0 0;
 }
 
 .footer-3 .img-social{
@@ -1137,3 +1062,484 @@ i {
   font-size: 30px;
   text-align: center;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  RESPONSIVO  */
+
+@media (max-width: 1300px) {
+  .grid-section {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+        grid-template-areas:
+        "title1"
+        "section1"
+        "title2"
+        "section2";
+    margin: 0 130px;
+  }
+  .section-day, .section-week {
+    width: 100%;
+  }
+  .anime-info {
+    width: 80%; 
+}
+.img-portada {
+  width: 150px;
+  height: 225px;
+}.section-day, .section-week {
+  width: 100%;
+  height: 250px;
+}
+.grid-section h1.title-w {
+  margin: 20px 0;
+}
+.new-1 {
+  height: 500px;
+}
+}
+
+@media (max-width: 1170px) { 
+  .header {
+    margin: 25px 50px 0 50px;
+  }
+  .video-section {
+    margin: 0 50px;
+  } 
+  .grid-section {
+    display: grid;
+    grid-template-columns: repeat(1, auto);
+        grid-template-areas:
+        "title1"
+        "section1"
+        "title2"
+        "section2";
+    margin: 0 50px;
+}
+.grid-section .title-d {
+  margin-left: 0px;
+  margin-top: 15px;
+}
+.section-day, .section-week {
+  margin: 0 0;
+  width: 100%;
+  min-height: 480px;
+  padding: 20px;
+}
+.grid-section .title-w {
+  grid-area: title2;
+  margin-left: 0px;
+  margin-bottom: 0;
+}
+.img-portada {
+  width: 30%;
+  height: auto;
+  position: relative;
+  top: 0;
+  left: 0;
+  float: left;
+}
+.img-portada div a img {
+  width: 100%;
+  height: 100%;
+}
+
+
+.anime-info {
+  width: 70%;
+  height: 368px;
+  padding-left: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.anime-info h2 {
+  margin-left: 0;
+  font-size: 40px;
+  line-height: 40px;
+  padding-bottom: 10px;
+}
+.anime-info p {
+  margin-left: 0;
+  font-size: 15px;
+  padding-right: 0px;
+  line-height: 25px;
+}
+.list-info {
+  margin-left: 0;
+  margin-top: 10px;
+  font-size: 13px;
+}
+.img-carousel {
+  width: 100%;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.img-carousel div {
+  width: 195px;
+  min-height: 110px;
+}
+
+.list-genero {
+  margin-top: 20px;
+}
+
+.list-genero li {
+  font-size: 15px;
+}
+.grid-section .title-w { 
+  margin: 40px 0 10px 0;
+}
+.grid-new {
+  margin: 0 50px;
+  margin-bottom: 60px;
+}
+.new-1 {
+  height: 500px;
+}
+.footer {
+  padding: 0 50px; 
+}
+}
+
+@media (max-width: 1009px) { 
+  .container-video-links {
+    grid-template-columns: repeat(auto-fill, minmax(70px, 250px));
+    gap: 10px;
+  }
+  .new-1 {
+    height: 530px;
+}
+}
+
+@media (max-width: 960px) { 
+  .section-day, .section-week {
+    margin: 0 0;
+    width: auto;
+    min-height: 390px;
+    padding: 20px;
+}
+.new-1 {
+  height: 600px;
+}
+}
+
+@media (max-width: 887px) { 
+  .container-video-links {
+    grid-template-columns: repeat(auto-fill, minmax(70px, 234px));
+    gap: 20px;
+  }
+  .img-new1 div a img {
+    width: 100%;
+}
+.grid-new {
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(3, auto);
+}
+.footer-2 {
+  display: flex;
+  flex-wrap: wrap;
+}
+}
+
+@media (max-width: 859px) { 
+  .container-video-links {
+    grid-template-columns: repeat(auto-fit, minmax(70px, 210px));
+    gap: 5px;
+  }
+  .section-day, .section-week {
+    margin: 0 0;
+    width: auto;
+    min-height: 440px;
+    padding: 20px;
+}
+.new-1 {
+  height: 560px;
+}
+}
+
+@media (max-width: 757px) { 
+  .container-video-links {
+    grid-template-columns: repeat(auto-fit, minmax(70px, 260px));
+    gap: 5px;
+  }
+  .new-1 {
+    height: 520px;
+}
+.header {
+  margin: 25px 50px 0 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  flex-direction: column;
+}
+.header .nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column-reverse;
+  gap: 20px;
+}
+.search { 
+  width: 100%; 
+}
+.header .nav .nav-list li:nth-child(1) {
+  margin-left: 0;
+}
+.header .nav .nav-list li a {
+  margin-left: 0;
+}
+
+}
+
+@media (max-width: 642px) { 
+  .container-video-links {
+    grid-template-columns: repeat(auto-fit, minmax(70px, 245px));
+    gap: 10px;
+  }
+  .section-day, .section-week {
+    margin: 0 0;
+    width: auto;
+    min-height: 530px;
+    padding: 20px;
+}
+.new-1 {
+  height: 500px;
+}
+.footer {
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: 20px auto auto auto 20px;
+      grid-template-areas:
+      "blanco1"
+      "footer1"
+      "footer2"
+      "footer3"
+      "blanco2";
+}
+.footer-1 {
+  padding-bottom: 10px;
+}
+.footer-2 {
+  border-left: 0px solid #000;
+  border-right: 0px solid #000;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+  padding: 10px 0;
+}
+.footer-3 {
+  padding-top: 10px;
+}
+
+}
+
+@media (max-width: 612px) { 
+  .container-video-links {
+    grid-template-columns: repeat(auto-fit, minmax(70px, 100%));
+    gap: 30px;
+  }
+  .anime-img-1,
+  .anime-img-2,
+  .anime-img-3,
+  .anime-img-4,
+  .anime-img-5,
+  .anime-img-6,
+  .anime-img-7,
+  .anime-img-8,
+  .anime-img-9,
+  .anime-img-10,
+  .anime-img-11,
+  .anime-img-12,
+  .anime-img-13,
+  .anime-img-14,
+  .anime-img-15,
+  .anime-img-16 {
+    max-height: 100%;
+  }
+  .anime-info {
+    width: 100%;
+    padding-left: 0;
+}
+.anime-info h2 {
+  text-align: center;
+}
+.img-portada {
+  width: 300px; 
+  height: auto;
+}
+.section-day, .section-week {
+  justify-content: center;
+  min-height: 850px;
+}
+.new-1 {
+  height: 480px;
+}
+}
+
+@media (max-width: 560px) { 
+  .section-day, .section-week { 
+    min-height: 960px;
+}
+.section-day, .section-week {
+  align-content: flex-start;
+  gap: 15px;
+}
+} 
+
+@media (max-width: 420px) {
+  .search .input { 
+    width: auto; 
+}
+}
+
+@media (max-width: 430px) { 
+  .video-section h1 {
+    font-size: 15px;
+}
+.list-info {
+  grid-template-columns: repeat(1, 1fr);
+  grid-template-rows: repeat(1, 1fr);
+  padding: 0;
+}
+.section-day, .section-week {
+  min-height: 1040px;
+}
+.new-1 {
+  height: 500px;
+}
+.header .logo h1 {
+  font-size: 35px; 
+}
+}
+
+@media (max-width: 460px) { 
+  .img-portada {
+    width: auto;
+}
+.section-day, .section-week {
+  justify-content: center;
+  min-height: 1000px;
+}
+}
+
+@media (max-width: 390px) { 
+  .img-portada {
+    width: 200px;
+}
+.anime-info {
+  width: 200px;
+  padding-left: 0;
+}
+.section-day, .section-week { 
+  min-height: 1100px;
+}
+.anime-info h2 {
+  font-size: 30px;
+}
+.new-1 {
+  height: 530px;
+}
+}
+
+@media (max-width: 360px) {
+  .img-portada {
+    width: 170px;
+}
+.anime-info {
+  width: 180px;
+  padding-left: 0;
+}
+.section-day, .section-week { 
+  min-height: 1090px;
+  padding: 10px;
+}
+.new-1 {
+  height: 600px;
+}
+}
+
+@media (max-width: 355px) {
+  .header .nav .nav-list li { 
+    width: 100%;
+    text-align: center;
+    padding: 10px 0;
+}
+}
+
+@media (max-width: 320px) { 
+  .header {
+    margin: 25px 10px 0 10px;
+  }
+  .video-section {
+    margin: 0 10px;
+  } 
+  .grid-section {
+    margin: 0 10px;
+}
+.img-portada {
+  width: 250px;
+}
+.anime-info {
+  width: 100%; 
+}
+.section-day, .section-week {
+  min-height: 960px; 
+}
+.loop-text .tag-h1 {
+  font-size: 30px; 
+}
+.grid-new {
+  margin: 0 10px;
+  margin-bottom: 60px;
+}
+.new-1 {
+  height: 500px;
+}
+.btn-read-more {
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transition: transform .5s;
+  transform: translateX(-25%);
+}
+
+.btn-read-more:hover {
+  transform: scale(1) rotate(0);
+  color: #000;
+  transform: translateX(-25%);
+}
+.footer {
+  padding: 0 10px;
+}
+}
+
+
+
+
