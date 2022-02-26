@@ -1,2 +1,2 @@
 # Pagina_anime_v3
-Algunas mejoras
+Página anime inspirada en JKanime, AnimeFLV, Otakustv y AnimeID.
