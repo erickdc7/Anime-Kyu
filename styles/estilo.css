@@ -1413,9 +1413,13 @@ i {
 }
 } 
 
-@media (max-width: 420px) {
-  .search .input { 
-    width: auto; 
+@media (max-width: 460px) { 
+  .img-portada {
+    width: auto;
+}
+.section-day, .section-week {
+  justify-content: center;
+  min-height: 1000px;
 }
 }
 
@@ -1439,13 +1443,9 @@ i {
 }
 }
 
-@media (max-width: 460px) { 
-  .img-portada {
-    width: auto;
-}
-.section-day, .section-week {
-  justify-content: center;
-  min-height: 1000px;
+@media (max-width: 420px) {
+  .search .input { 
+    width: auto; 
 }
 }
 
