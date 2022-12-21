@@ -1,5 +1,5 @@
 # Anime Kyu
-Página anime inspirada en JKanime, AnimeFLV, Otakustv y AnimeID.
+Página web estática anime inspirada en JKanime, AnimeFLV, Otakustv y AnimeID.
 
 ## Tecnologías
 Esta página web fue realizada con las siguientes tecnologías:
@@ -15,7 +15,7 @@ Esta página web contiene 3 secciones principales: **Inicio**, **Animes** y **Em
 ![seccion-inicio](inicio.jpeg)
 
 ### Animes
-#### En esta sección podrás ver los animes que hay en esta página web, además también podrás filtrarlos por género, tipo, año, estado y orden.
+#### En esta sección podrás ver los animes que hay en esta página web, cuenta con una paginación y además también podrás filtrarlos por género, tipo, año, estado y orden.
 ![seccion-animes](animes.jpeg)
 
 ### Emisión
